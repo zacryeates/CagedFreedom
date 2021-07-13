@@ -8,37 +8,48 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Epilogue" rel="stylesheet">
+		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
+
+
 		<section class="articles">
 		<div id="app">
+			<audio id="meadow-song" src="sound/MeadowSound.wav" preload="metadata" type="audio/mpeg">
+					Your browser does not support the audio element.
+			</audio>
+			<audio id="beach-song" src="sound/BeachSound.wav" preload="metadata" type="audio/mpeg">
+					Your browser does not support the audio element.
+			</audio>
+			<audio id="forest-song" src="sound/ForestSound.wav" preload="metadata" type="audio/mpeg">
+					Your browser does not support the audio element.
+			</audio>
+			<audio id="riverbank-song" src="sound/RiverbankSound.wav" preload="metadata" type="audio/mpeg">
+					Your browser does not support the audio element.
+			</audio>
 
 		    <h2 class="section-title">Pasirink savo patyrimą / Select your experience</h2>
 				<p>vieno patyrimo trukmė / duration of one experience: 3 min</p>
 
 		  <section class="grid">
 		    <div class="grid-group">
-		      <div class="grid-group-image"><img src="img/Meadow.jpg"/></div>
+		      <div class="btn" id="btn-meadow" class="grid-group-image"><img src="img/Meadow.jpg"/></div>
 		      <div class="grid-group-meta">
-		        <!-- <p>trukmė/duration 02:50 min</p> -->
 		      </div>
 		    </div>
 		    <div class="grid-group">
-		      <div class="grid-group-image"><img src="img/Beach.jpg"/></div>
+		      <div class="btn" id="btn-beach" class="grid-group-image"><img src="img/Beach.jpg"/></div>
 		      <div class="grid-group-meta">
-		        <!-- <p>trukmė/duration 03:18 min</p> -->
 		      </div>
 		    </div>
 		    <div class="grid-group">
-		      <div class="grid-group-image"><img src="img/Forest.jpg"/></div>
+		      <div class="btn" id="btn-forest" class="grid-group-image"><img src="img/Forest.jpg"/></div>
 		      <div class="grid-group-meta">
-		        <!-- <p>trukmė/duration 02:48 min</p> -->
 		      </div>
 		    </div>
 		    <div class="grid-group">
-		      <div class="grid-group-image"><img src="img/Riverbank.jpg"/></div>
+		      <div class="btn" id="btn-riverbank" class="grid-group-image"><img src="img/Riverbank.jpg"/></div>
 		      <div class="grid-group-meta">
-		        <!-- <p>trukmė/duration 02:44 min</p> -->
 		      </div>
 		    </div>
 		  </section>

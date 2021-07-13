@@ -1,0 +1,58 @@
+body {
+  font-family: Epilogue;
+  background: black;
+  color: white;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+#app {
+  max-width: 1000px;
+  margin: auto;
+}
+
+p {
+  text-align: end;
+  padding-right: 11px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: #edd948;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+@media (min-width: 500px) {
+  .grid {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+@media (min-width: 800px) {
+  .grid {
+    padding: 5px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-group-meta h3,
+.grid-group-meta h4 {
+  margin: 0;
+}
+.grid-group-meta h4 {
+  font-style: italic;
+}
+
+.grid-group-text p {
+  line-height: 1.5;
+  text-align: end;
+}

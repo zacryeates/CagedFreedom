@@ -4,6 +4,11 @@ window.onload = function() {
   var forestSong = document.getElementById('forest-song');
   var riverbankSong = document.getElementById('riverbank-song');
 
+  var meadowImg = document.getElementById('img-meadow');
+  var beachImg = document.getElementById('img-beach');
+  var forestImg = document.getElementById('img-forest');
+  var riverbankImg = document.getElementById('img-riverbank');
+
   var btnMeadow = document.getElementById('btn-meadow');
   var btnBeach = document.getElementById('btn-beach');
   var btnForest = document.getElementById('btn-forest');
@@ -15,8 +20,12 @@ window.onload = function() {
       beachSong.load();
       riverbankSong.load();
       forestSong.load();
-      playEnd(meadowSong);
-      progress(btnMeadow, meadowSong);
+      meadowImg.style.borderColor = "black";
+      beachImg.style.borderColor = "black";
+      forestImg.style.borderColor = "black";
+      riverbankImg.style.borderColor = "black";
+      playEnd(meadowImg,meadowSong);
+      progress(meadowImg, btnMeadow, meadowSong);
     });
   }
 
@@ -26,8 +35,12 @@ window.onload = function() {
       meadowSong.load();
       riverbankSong.load();
       forestSong.load();
-      playEnd(beachSong);
-      progress(btnBeach, beachSong);
+      meadowImg.style.borderColor = "black";
+      beachImg.style.borderColor = "black";
+      forestImg.style.borderColor = "black";
+      riverbankImg.style.borderColor = "black";
+      playEnd(beachImg, beachSong);
+      progress(beachImg, btnBeach, beachSong);
     });
   }
 
@@ -37,8 +50,12 @@ window.onload = function() {
       meadowSong.load();
       riverbankSong.load();
       beachSong.load();
-      playEnd(forestSong);
-      progress(btnForest, forestSong);
+      meadowImg.style.borderColor = "black";
+      beachImg.style.borderColor = "black";
+      forestImg.style.borderColor = "black";
+      riverbankImg.style.borderColor = "black";
+      playEnd(forestImg,forestSong);
+      progress(forestImg, btnForest, forestSong);
     });
   }
 
@@ -48,40 +65,47 @@ window.onload = function() {
       meadowSong.load();
       forestSong.load();
       beachSong.load();
-      playEnd(riverbankSong);
-      progress(btnRiverbank, riverbankSong);
+      meadowImg.style.borderColor = "black";
+      beachImg.style.borderColor = "black";
+      forestImg.style.borderColor = "black";
+      riverbankImg.style.borderColor = "black";
+      playEnd(riverbankImg, riverbankSong);
+      progress(riverbankImg, btnRiverbank, riverbankSong);
     });
   }
 };
 
-function playEnd(song) {
+function playEnd(btn, song) {
   if (song.paused && song.currentTime >= 0 && !song.ended) {
     song.play();
+    btn.style.borderColor = "#edd948";
   } else {
     song.load();
+    btn.style.borderColor = "black";
   }
 }
 
-function reset(btn, song) {
+function reset(img, btn, song) {
   if (btn.classList.contains('playing')) {
     btn.classList.toggle('playing');
   }
   song.pause();
   song.currentTime = 0;
+  img.style.borderColor = "black";
 }
 
-function progress(btn, song) {
+function progress(img, btn, song) {
   setTimeout(function() {
     var end = song.duration;
     var current = song.currentTime;
     var percent = current / (end / 100);
     //check if song is at the end
     if (current == end) {
-      reset(btn, song);
+      reset(img, btn, song);
     }
     //set inset box shadow
-    btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(237 217 72)"
+    btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(237 217 72)";
     //call function again
-    progress(btn, song);
+    progress(img, btn, song);
   }, 1000);
 }

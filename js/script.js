@@ -78,7 +78,7 @@ window.onload = function() {
 function playEnd(btn, song) {
   if (song.paused && song.currentTime >= 0 && !song.ended) {
     song.play();
-    btn.style.borderColor = "#edd948";
+    btn.style.borderColor = "#e8ba3a";
   } else {
     song.load();
     btn.style.borderColor = "black";
@@ -104,7 +104,7 @@ function progress(img, btn, song) {
       reset(img, btn, song);
     }
     //set inset box shadow
-    btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(237 217 72)";
+    btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(232 186 58)";
     //call function again
     progress(img, btn, song);
   }, 1000);

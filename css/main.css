@@ -2,6 +2,14 @@ body {
   font-family: Epilogue;
   background: black;
   color: white;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+* {
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 img {
@@ -20,33 +28,36 @@ img {
 }
 
 p {
-  text-align: end;
-  padding-right: 11px;
+  letter-spacing: 1px;
+  color: #d9dada;
+  font-size: 15px;
+  text-align: center;
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
 
 .section-title {
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #edd948;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  color: #e8ba3a;
+  padding-top: 1rem;
   text-align: center;
   font-size: 32px;
   font-weight: 900;
+  margin-bottom: -4px;
 }
 
 @media (min-width: 500px) {
   .grid {
-    padding: 5px;
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 2rem;
   }
 }
 @media (min-width: 800px) {
   .grid {
-    padding: 5px;
+    padding: 30px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -57,6 +68,10 @@ p {
 }
 .grid-group-meta h4 {
   font-style: italic;
+}
+
+.grid-group {
+  padding: 10px;
 }
 
 .grid-group-text p {
